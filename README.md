@@ -3,7 +3,7 @@
 AI-driven network attack detection system for SDN networks.
 
 ## What it does
-(1-2 sentences: what the project does)
+This project detects network attacks like port scans and SYN floods on SDN networks using machine learning.
 
 ## Tech Stack
 - Python
@@ -14,7 +14,7 @@ AI-driven network attack detection system for SDN networks.
 - scikit-learn (Random Forest)
 
 ## How it works
-(3-4 sentences: you built a virtual network, captured traffic, trained ML model)
+I built a virtual SDN network using Mininet with Open vSwitch on Linux. I captured three types of traffic — normal pings, port scans using nmap, and SYN floods using hping3 — with tcpdump. I extracted features from the pcap files using Scapy and trained a Random Forest model with scikit-learn to classify the traffic.
 
 ## Results
 - Normal traffic: 100% detection
