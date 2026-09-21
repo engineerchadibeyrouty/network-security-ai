@@ -18,9 +18,9 @@ I built a virtual SDN network using Mininet with Open vSwitch on Linux. I captur
 
 ## Results
 - Normal traffic: 100% detection
-- Flood attacks: 87% F1-score
-- Port scans: 64% F1-score
-- Overall accuracy: 82%
+- Flood attacks: 100% F1-score
+- Port scans: 100% F1-score
+- Overall accuracy: 100%
 
 ## Status
 In progress - improving portscan detection
