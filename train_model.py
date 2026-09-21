@@ -11,12 +11,12 @@ le_dst = LabelEncoder()
 df['src_ip_enc'] = le_src.fit_transform(df['src_ip'])
 df['dst_ip_enc'] = le_dst.fit_transform(df['dst_ip'])
 
-X = df[['src_ip_enc', 'dst_ip_enc', 'protocol', 'length']]
+X = df[['src_ip_enc', 'dst_ip_enc', 'protocol', 'length', 'ttl', 'src_port', 'dst_port', 'tcp_flags']]
 y = df['label']
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
-model = RandomForestClassifier(random_state=42)
+model = RandomForestClassifier(random_state=42, class_weight='balanced')
 model.fit(X_train, y_train)
 
 y_pred = model.predict(X_test)
